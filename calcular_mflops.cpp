@@ -30,10 +30,8 @@ int main(){
 	printf("** Contador em milissegundos\t\t\tVersao para MFLOPS\n");
 	printf("**\n***************************************\n\n");
 	
-	printf("Numero de tentativas: %d\n\n",quantidade);
+	printf("Numero de instrucoes: %d\n\n",quantidade);
 	
-	printf("Aperte ENTER para o inicio.");
-	getchar();
 	int start = getMilliCount();
 
    // Testando precisão do cálculo do tempo
@@ -41,13 +39,16 @@ int main(){
     Sleep(2739);
    */
 
-    for(i; i < quantidade; i++){
-           soma = soma + 0.1;
+    for(; i < quantidade; i++){
+           soma = soma + 0.9;
            }
 
 	int milliSecondsElapsed = getMilliSpan(start);
 
-	printf("\n\nTempo = %u milisegundos", milliSecondsElapsed);
+	printf("\n\nTempo \t%u milisegundos\t %f segundos", milliSecondsElapsed,( (float) milliSecondsElapsed / 1e3 ));
+	
+	printf("\n\n%.3f MFLOPS", ( (float) (quantidade / ( (float) milliSecondsElapsed / 1e3 ) ) ) / 1e6 );
+
 
 	printf("\n\n\n");
 	
