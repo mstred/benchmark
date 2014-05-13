@@ -21,19 +21,17 @@ int getMilliSpan(int nTimeStart){
 
 int main(){
 
-	uint32_t quantidade = 1000000000;
-	int i = 1;
-	int soma = 0;
+	uint32_t quantidade = 1000000000; // 1 bilhão
+	uint32_t i = 1;
+	uint32_t soma = 0;
     
     printf("\n\n");
 	printf("****************************************\n**\n");
-	printf("** Contador em milissegundos\t\t\tVersão para MIPS\n");
+	printf("** Contador em milissegundos\t\t\tVersao para MIPS\n");
 	printf("**\n***************************************\n\n");
 	
-	printf("Numero de tentativas: %d\n\n",quantidade);
+	printf("Numero de instrucoes: %d\n\n",quantidade);
 	
-	printf("Aperte ENTER para o inicio.");
-	getchar();
 	int start = getMilliCount();
 
    // Testando precisão do cálculo do tempo
@@ -41,13 +39,16 @@ int main(){
     Sleep(2739);
    */
 
-    for(i; i < quantidade; i++){
-           soma = soma + 1;
+    for(;i < quantidade; i++){
+           soma = 2 - 2;
            }
+
 
 	int milliSecondsElapsed = getMilliSpan(start);
 
-	printf("\n\nTempo = %u milisegundos", milliSecondsElapsed);
+	printf("\n\nTempo \t%u milisegundos\t %f segundos", milliSecondsElapsed,( (float) milliSecondsElapsed / 1e3 ));
+	
+	printf("\n\n%.3f MIPS", ( (float) (quantidade / ( (float) milliSecondsElapsed / 1e3 ) ) ) / 1e6 );
 
 	printf("\n\n\n");
 	
