@@ -1,9 +1,8 @@
-#include <iostream>
 using namespace std;
-#include <cstdlib>
-#include <sys/timeb.h>
-#include "windows.h"
 
+#include <stdio.h>
+#include <stdint.h>
+#include <sys/timeb.h>
 
 int getMilliCount(){
 	timeb tb;
