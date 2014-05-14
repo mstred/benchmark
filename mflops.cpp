@@ -19,8 +19,8 @@ int getMilliSpan(int nTimeStart){
 }
 
 int main(){
-	uint32_t quantidade = 10000000000;
-	int i;
+	uint64_t quantidade = 1000000000000;
+	uint64_t i;
 	float soma = 0;
     
 	printf("\n\n************************************************************************\n");
@@ -31,23 +31,23 @@ int main(){
 	printf("***  *****  **  ********        ***        ***  **********         *****\n");
 	printf("************************************************************************\n\n");
 	
-	printf("Numero de instrucoes: %d\n\n", quantidade);
+	printf("Numero de instrucoes: %lu\n\n", quantidade);
 	
 	int start = getMilliCount();
 
     for(i = 1; i < quantidade; i++){
-		soma += 0.9;
+		soma += 0.001;
 	}
 
 	int elapsedMillis = getMilliSpan(start);
 
-	printf("\n\nTempo \t%u milisegundos\t %f segundos", elapsedMillis, ((float) elapsedMillis / 1e3));
+	printf("\n\nTempo \t%u milissegundos\t %f segundos", elapsedMillis, ((float) elapsedMillis / 1e3));
 	
 	printf("\n\n%.3f MFLOPS", ((float) (quantidade / ((float) elapsedMillis / 1e3))) / 1e6);
 
 	printf("\n\n\n");
 	
-	printf("Aperte ENTER para fechar.");
+	printf("Pressione ENTER para fechar.");
 	getchar();
 	return 1;
 }

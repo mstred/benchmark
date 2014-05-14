@@ -19,9 +19,9 @@ int getMilliSpan(int nTimeStart){
 }
 
 int main(){
-	uint32_t quantidade = 10000000000;
-	uint32_t i;
-	uint32_t soma;
+	uint64_t quantidade = 1000000000000;
+	uint64_t i;
+	uint64_t soma;
     
 	printf("\n\n**************************************************\n");
 	printf("***  *****  **  **        ***        *************\n");
@@ -31,7 +31,7 @@ int main(){
 	printf("***  *****  **  **  *********        *************\n");
 	printf("**************************************************\n\n");
 	
-	printf("Numero de instrucoes: %d\n\n", quantidade);
+	printf("Numero de instrucoes: %lu\n\n", quantidade);
 	
 	int start = getMilliCount();
 
@@ -47,7 +47,7 @@ int main(){
 
 	printf("\n\n\n");
 
-	printf("Aperte ENTER para fechar.");
+	printf("Pressione ENTER para fechar.");
 	getchar();
 	return 1;
 }
