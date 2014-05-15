@@ -19,7 +19,7 @@ int getMilliSpan(int nTimeStart){
 }
 
 int main(){
-	uint64_t quantidade = 1000000000000;
+	uint64_t quantidade = 100000000000;
 	uint64_t i;
 	float soma = 0;
     
